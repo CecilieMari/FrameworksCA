@@ -14,9 +14,6 @@ function Nav() {
             <Link to="/">Home</Link>
           </li>
           <li className={styles.navItem}>
-            <Link to="/products">Products</Link>
-          </li>
-          <li className={styles.navItem}>
             <Link to="/form">Contact Us</Link>
           </li>
           <li className={styles.navItem}>
