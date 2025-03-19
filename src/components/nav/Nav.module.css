@@ -1,0 +1,33 @@
+.nav {
+    display: flex;
+    align-items: center;
+    background-color: #d9bba8;
+    padding: 1rem;
+  }
+  
+  .navLeft {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navName {
+    color: #645d3b;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-right: 2rem; /* Space between name/logo and nav items */
+  }
+  
+  .navList {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .navItem {
+    color: #645d3b;
+  }
+  
+  .navItem a {
+    color: #645d3b;
+    text-decoration: none;
+  }
