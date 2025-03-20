@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import ProductCard from '../ProductCard/ProductCard';
+import Styles from './Home.module.css';
 
 const url = 'https://v2.api.noroff.dev/online-shop';
 
@@ -38,8 +39,8 @@ function Home() {
 
   return (
     <div>
-      <h1>Home</h1>
-      <div className="product-list">
+      <h1>Product</h1>
+      <div className={Styles.productGrid}>
         {products.map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}
