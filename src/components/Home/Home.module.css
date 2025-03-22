@@ -1,6 +1,6 @@
 .productGrid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Tre kolonner */
-    gap: 16px; /* Avstand mellom kortene */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 16px; 
     padding: 16px;
   }

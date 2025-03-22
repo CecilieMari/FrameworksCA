@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import ProductCard from '../ProductCard/ProductCard';
 import Styles from './Home.module.css';
+import { CartContext } from '../cart/CartContext';
 
 const url = 'https://v2.api.noroff.dev/online-shop';
 
@@ -8,6 +9,7 @@ function Home() {
   const [products, setProducts] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState(false);
+  const { addToCart } = useContext(CartContext);
 
   useEffect(() => {
     async function fetchProducts() {
@@ -42,7 +44,7 @@ function Home() {
       <h1>Product</h1>
       <div className={Styles.productGrid}>
         {products.map((product) => (
-          <ProductCard key={product.id} product={product} />
+          <ProductCard key={product.id} product={product} addToCart={addToCart} />
         ))}
       </div>
     </div>

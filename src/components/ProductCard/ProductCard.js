@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './ProductCard.module.css';
 
-function ProductCard({ product }) {
+function ProductCard({ product, addToCart }) {
   return (
     <div className={styles.productCard}>
       {product.image && (
@@ -15,6 +15,7 @@ function ProductCard({ product }) {
           <Link to={`/product/${product.id}`}>
             <button className={styles.viewButton}>View Product</button>
           </Link>
+        <button onClick={() => addToCart(product)} className={styles.addToCartButton}>Add to Cart</button>
         </div>
       </div>
     </div>
