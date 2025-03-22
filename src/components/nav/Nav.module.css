@@ -14,7 +14,7 @@
     color: #645d3b;
     font-size: 1.5rem;
     font-weight: bold;
-    margin-right: 2rem; /* Space between name/logo and nav items */
+    margin-right: 2rem;
   }
   
   .navList {
@@ -30,4 +30,15 @@
   .navItem a {
     color: #645d3b;
     text-decoration: none;
+  }
+
+  .cartCount {
+    background-color: #e74c3c;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border-radius: 50%;
+    padding: 0.2rem 0.5rem;
+    margin-left: 0.5rem;
+    display: inline-block;
   }

@@ -17,7 +17,7 @@ function SingleProduct() {
         setIsLoading(true);
         const response = await fetch(`${url}/${id}`);
         const json = await response.json();
-        console.log('Fetched product:', json); // Log the fetched product
+        console.log('Fetched product:', json);
         setProduct(json.data);
         setIsLoading(false);
       } catch (error) {
