@@ -6,7 +6,7 @@ import Layout from './components/Layout/Layout';
 import Form from './components/contact-us/Form';
 import Cart from './components/cart/Cart';
 import { CartProvider } from './components/cart/CartContext';
-import Checkout from './components/checkOut/Checkout';
+import Checkout from './components/checkout/Checkout';
 
 function RouteNotFound() {
   return <div>Page not found</div>;
