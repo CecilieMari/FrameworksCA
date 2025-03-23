@@ -6,6 +6,7 @@ import Layout from './components/Layout/Layout';
 import Form from './components/contact-us/Form';
 import Cart from './components/cart/Cart';
 import { CartProvider } from './components/cart/CartContext';
+import Checkout from './components/checkOut/Checkout';
 
 function RouteNotFound() {
   return <div>Page not found</div>;
@@ -21,6 +22,7 @@ function App() {
         <Route path="/product/:id" element={<SingleProduct />} /> {/* SingleProduct*/}
         <Route path="/form" element={<Form />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/checkout" element={<Checkout />} />
         <Route path="*" element={<RouteNotFound />} />
       </Routes>
      </Layout>

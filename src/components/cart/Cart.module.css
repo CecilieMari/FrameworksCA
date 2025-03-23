@@ -32,3 +32,21 @@
     font-size: 1rem;
     color: #333;
   }
+
+  .checkoutButton {
+    margin-top: 16px;
+    padding: 12px 24px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    display: block;
+    width: 100%; 
+    text-align: center;
+  }
+  
+  .checkoutButton:hover {
+    background-color: #218838;
+  }
