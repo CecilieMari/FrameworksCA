@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom'; // Import Link from react-router-dom
-import styles from './SearchBar'; // Import the CSS module
+import { Link } from 'react-router-dom'; 
+import styles from './SearchBar'; 
 
 function SearchBar({ products }) {
   const [query, setQuery] = useState('');

@@ -11,6 +11,8 @@ function ProductCard({ product, addToCart }) {
       <div className={styles.productDetails}>
         <h2>{product.title}</h2>
         <p>Price: ${product.price}</p>
+        <p>New Price: ${product.discountedPrice}</p>
+        
         <div className={styles.buttonGroup}>
           <Link to={`/product/${product.id}`}>
             <button className={styles.viewButton}>View Product</button>

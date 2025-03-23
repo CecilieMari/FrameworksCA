@@ -38,19 +38,19 @@
   }
   
   .viewButton {
-    background-color: #007bff;
+    background-color: #645d3b;
     color: white;
   }
   
   .addToCartButton {
-    background-color: #28a745;
+    background-color: #645d3b;
     color: white;
   }
   
   .viewButton:hover {
-    background-color: #0056b3;
+    background-color: black;
   }
   
   .addToCartButton:hover {
-    background-color: #218838;
+    background-color: black;
   }

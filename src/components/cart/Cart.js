@@ -4,12 +4,12 @@ import styles from './Cart.module.css';
 import { useNavigate } from 'react-router-dom';
 
 function Cart() {
-  const { cart, removeFromCart, setCart } = useContext(CartContext); // Hent setCart fra CartContext
+  const { cart, removeFromCart, setCart } = useContext(CartContext);
   const navigate = useNavigate();
 
   const checkout = () => {
-    setCart([]); // Tøm handlekurven
-    navigate('/checkout'); // Naviger til "Checkout"-siden
+    setCart([]);
+    navigate('/checkout'); 
   };
 
   return (
@@ -29,7 +29,7 @@ function Cart() {
                 />
                 <div className={styles.cartDetails}>
                   <h2 className={styles.cartTitle}>{product.title}</h2>
-                  <p className={styles.cartPrice}>Price: ${product.price}</p>
+                  <p className={styles.cartPrice}>Price: ${product.discountedPrice}</p>
                   <button
                     onClick={() => removeFromCart(index)}
                     className={styles.removeButton}
@@ -41,7 +41,12 @@ function Cart() {
             ))}
           </div>
           <p className={styles.cartTotal}>
-            Total: ${cart.reduce((total, product) => total + product.price, 0)}
+            Total: ${cart.reduce((total, product) => {
+              const priceToAdd = product.discountedPrice !== product.price 
+                ? product.discountedPrice 
+                : product.price;
+              return total + priceToAdd;
+            }, 0)}
           </p>
           <button onClick={checkout} className={styles.checkoutButton}>
             Checkout
